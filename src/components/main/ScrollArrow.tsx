@@ -24,7 +24,7 @@ function ScrollArrow({ delay }: DelayT) {
     <ScrollArrowBox
       initial={{ ...OPACITY_0, ...Y_M20 }}
       animate={{ ...OPACITY_1, ...Y_0 }}
-      transition={{ ...ANI_TRANSITION, delay: delay }}
+      transition={{ ...ANI_TRANSITION, delay: delay } as any}
       className="text-white dark:text-gray-200"
     >
       <svg

@@ -69,7 +69,7 @@ function SocialLinkList({ delay, width }: { delay?: number, width?: string }) {
       width={width}
       initial={OPACITY_0}
       animate={OPACITY_1}
-      transition={{ ...ANI_TRANSITION, delay: delay && delay }}
+      transition={{ ...ANI_TRANSITION, delay: delay && delay } as any}
     >
       {socialLink.map((item) => (
         <DataToolTip key={item.id} dataTooltip={item.datatooltip} type={item.tooltiptype}>

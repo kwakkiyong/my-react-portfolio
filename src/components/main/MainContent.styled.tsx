@@ -2,9 +2,10 @@ import tw from 'tailwind-styled-components';
 import { motion } from 'framer-motion';
 
 type IsMobile = {
-  ismobile: string
-}
+  ismobile: string;
+};
 
+/* 메인 컴포넌트 */
 export const MainComponent = tw.main<IsMobile>`
   relative
   h-screen
@@ -21,7 +22,7 @@ export const MainComponent = tw.main<IsMobile>`
   overflow-hidden
   transition-colors
 
-  ${props => props.ismobile === 'true' ? 'max-sm:h-[calc(var(--vh,1vh)*100)]' : 'max-sm:h-screen'}
+  ${(props) => (props.ismobile === 'true' ? 'max-sm:h-[calc(var(--vh,1vh)*100)]' : 'max-sm:h-screen')}
   max-sm:pt-20
   max-sm:px-5
 `;
@@ -41,12 +42,12 @@ export const MainBg = tw(motion.div)`
   transition-colors
 `;
 
-export const Img = tw(motion.img) <IsMobile>`
+export const Img = tw(motion.img)<IsMobile>`
   absolute
   bottom-0
   w-auto
   h-[calc(100vh-40vh)]
   transition-all
 
-  ${props => props.ismobile === 'true' ? 'max-sm:h-[calc(100vh-50vh)]' : 'max-sm:h-[calc(100vh-40vh)]'}
+  ${(props) => (props.ismobile === 'true' ? 'max-sm:h-[calc(100vh-50vh)]' : 'max-sm:h-[calc(100vh-40vh)]')}
 `;

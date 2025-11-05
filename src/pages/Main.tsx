@@ -10,12 +10,13 @@ import { ANI_TRANSITION, OPACITY_0, OPACITY_1 } from '../utils/constant/constant
 import TextWrap from '../components/main/TextWrap';
 import { MainComponent } from '../components/main/MainContent.styled';
 import MainBackground from '../components/atoms/background/MainBackground';
+import AnimatedBackground from '../components/atoms/background/AnimatedBackground';
 
 function Main() {
-  const { pathname } = useLocation();
-  const vhRef = useRef(0);
-  const mainRef = useRef<HTMLDivElement>(null);
-  const ismobile = isMobile ? 'true' : 'false';
+  const { pathname } = useLocation(); // 현재 라우트 경로
+  const vhRef = useRef(0); // 모바일 뷰포트 높이 계산용
+  const mainRef = useRef<HTMLDivElement>(null); // 메인 섹션 Ref
+  const ismobile = isMobile ? 'true' : 'false'; // 모바일 여부
 
   // 모바일 환경에서 높이 딱 맞춰 나오도록
   useEffect(() => {
@@ -39,20 +40,28 @@ function Main() {
   }, []);
 
   return (
-    <motion.div className="top-0">
+    <motion.div className="top-0" id="main">
       <MainComponent ref={mainRef} ismobile={ismobile}>
+        {/* 배경 */}
         <MainBackground
           initial={{ ...OPACITY_0, scale: 1.25 }}
           animate={{ ...OPACITY_1, scale: 1 }}
           transition={{ ...ANI_TRANSITION, delay: 3 }}
         />
 
+        {/* 애니메이션 배경 (별/비눗방울) */}
+        <AnimatedBackground />
+
+        {/* GitHub, Blog 등 소셜 링크 */}
         <SocialLinkList delay={3} />
 
+        {/* 메인 타이틀, 서브텍스트 */}
         <TextWrap />
 
+        {/* 하단 스크롤 화살표 */}
         <ScrollArrow delay={3.9} />
 
+        {/* 좌측 하단 업데이트 날짜 */}
         <InfoWrap delay={3} />
       </MainComponent>
     </motion.div>

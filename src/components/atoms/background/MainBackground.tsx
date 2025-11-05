@@ -23,16 +23,17 @@ type AnimationT = {
 
 type TransitionT = {
   delay?: number
-  ease?: string;
+  ease?: string | string[];
   duration?: number;
 }
 
 function MainBackground({ initial, animate, transition }: { initial?: AnimationT, animate?: AnimationT, transition?: TransitionT }) {
   return (
     <>
-      <MainBg initial={{ ...initial }}
+      <MainBg 
+        initial={{ ...initial }}
         animate={{ ...animate }}
-        transition={{ ...transition }}
+        transition={{ ...transition } as any}
       />
     </>
   );

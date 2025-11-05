@@ -4,6 +4,10 @@ export default {
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['Comic Neue', 'Gamja Flower', 'Fredoka', 'cursive'],
+        'comic-neue': ['Comic Neue', 'Gamja Flower', 'Fredoka', 'cursive'],
+      },
       colors: {
         'mainBlack': '#232323',
         'mainGray': '#EFEFF1',

@@ -31,7 +31,7 @@ function InfoWrap({ delay }: DelayT) {
     <InfoTxtWrap
       initial={OPACITY_0}
       animate={OPACITY_1}
-      transition={{ ...ANI_TRANSITION, delay: delay }}
+      transition={{ ...ANI_TRANSITION, delay: delay } as any}
     >
       <InfoTxt>update. {UPDATE_DATA}</InfoTxt>
     </InfoTxtWrap>

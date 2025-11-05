@@ -2,3 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  * {
+    font-family: 'Comic Neue', 'Gamja Flower', 'Fredoka', cursive;
+  }
+
+  body {
+    font-family: 'Comic Neue', 'Gamja Flower', 'Fredoka', cursive;
+  }
+
+  .font-comic-neue {
+    font-family: 'Comic Neue', 'Gamja Flower', 'Fredoka', cursive;
+  }
+}
+

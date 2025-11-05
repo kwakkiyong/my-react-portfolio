@@ -5,3 +5,4 @@ export type DelayT = {
 export type ChildernT = {
   children: React.ReactNode;
 };
+

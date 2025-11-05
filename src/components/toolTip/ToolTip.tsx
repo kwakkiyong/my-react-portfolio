@@ -71,3 +71,4 @@ function DataToolTip({ children, dataTooltip, type }:
 }
 
 export default DataToolTip;
+

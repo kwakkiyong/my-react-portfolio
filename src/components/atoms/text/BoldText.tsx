@@ -12,3 +12,4 @@ function BoldText({ children }: ChildernT) {
 }
 
 export default BoldText;
+
