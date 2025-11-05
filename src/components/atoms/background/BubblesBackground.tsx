@@ -10,7 +10,6 @@ const BubblesContainer = tw.div`
   right-0
   bottom-0
   overflow-hidden
-  z-[-1]
 `;
 
 const Bubble = tw(motion.div)`

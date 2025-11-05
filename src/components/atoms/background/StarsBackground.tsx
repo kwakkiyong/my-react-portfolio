@@ -8,7 +8,6 @@ const StarsContainer = tw.div`
   right-0
   bottom-0
   overflow-hidden
-  z-[-1]
 `;
 
 const Star = tw(motion.div)`

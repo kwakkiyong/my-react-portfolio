@@ -46,10 +46,10 @@ const SectionDot = tw.button<{ $active: boolean }>`
   border-2
   transition-all
   duration-300
-  ${props => props.$active 
-    ? 'bg-blue-500 dark:bg-blue-400 border-blue-500 dark:border-blue-400 scale-125' 
-    : 'bg-gray-400 dark:bg-gray-600 border-gray-400 dark:border-gray-600 hover:bg-gray-500 dark:hover:bg-gray-500'
-  }
+  ${(props) =>
+    props.$active
+      ? 'bg-blue-500 dark:bg-blue-400 border-blue-500 dark:border-blue-400 scale-125'
+      : 'bg-gray-400 dark:bg-gray-600 border-gray-400 dark:border-gray-600 hover:bg-gray-500 dark:hover:bg-gray-500'}
 `;
 
 const SectionLabel = tw.span<{ $active: boolean }>`
@@ -62,18 +62,18 @@ const SectionLabel = tw.span<{ $active: boolean }>`
   whitespace-nowrap
   transition-all
   duration-300
-  ${props => props.$active
-    ? 'text-blue-500 dark:text-blue-400 opacity-100 scale-110'
-    : 'text-gray-400 dark:text-gray-600 opacity-0 scale-90'
-  }
+  ${(props) =>
+    props.$active
+      ? 'text-blue-500 dark:text-blue-400 opacity-100 scale-110'
+      : 'text-gray-400 dark:text-gray-600 opacity-0 scale-90'}
 `;
 
 const sections = [
   { id: 'main', label: 'Main', elementId: null },
-  { id: 'about', label: 'About', elementId: 'about' },
-  { id: 'skills', label: 'Skills', elementId: 'Skills' },
-  { id: 'projects', label: 'Projects', elementId: 'Projects' },
-  { id: 'contact', label: 'Contact', elementId: 'contact' },
+  { id: 'AboutMe', label: 'AboutMe', elementId: 'AboutMe' },
+  { id: 'Skills', label: 'Skills', elementId: 'Skills' },
+  { id: 'Career', label: 'Career', elementId: 'Career' },
+  { id: 'Contact', label: 'Contact', elementId: 'Contact' },
 ];
 
 function CustomScrollBar() {
@@ -99,7 +99,7 @@ function CustomScrollBar() {
 
       // 모든 섹션 요소 찾기
       const sectionElements = sections
-        .map(section => {
+        .map((section) => {
           if (section.id === 'main') {
             return { id: section.id, element: document.body.firstElementChild as HTMLElement };
           }
@@ -108,7 +108,7 @@ function CustomScrollBar() {
           }
           return null;
         })
-        .filter(item => item && item.element !== null) as Array<{ id: string; element: HTMLElement }>;
+        .filter((item) => item && item.element !== null) as Array<{ id: string; element: HTMLElement }>;
 
       // 역순으로 확인하여 가장 가까운 섹션 찾기
       for (let i = sectionElements.length - 1; i >= 0; i--) {
@@ -116,7 +116,7 @@ function CustomScrollBar() {
         if (element) {
           const rect = element.getBoundingClientRect();
           const elementTop = rect.top + scrollTop;
-          
+
           // 섹션의 상단이 화면 중앙보다 위에 있으면 활성화
           if (elementTop <= scrollOffset) {
             setActiveSection(id);
@@ -138,10 +138,10 @@ function CustomScrollBar() {
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       const visibleSections = entries
-        .filter(entry => entry.isIntersecting)
-        .map(entry => {
+        .filter((entry) => entry.isIntersecting)
+        .map((entry) => {
           const sectionId = entry.target.id;
-          return sections.find(s => s.elementId === sectionId || (s.id === 'main' && !sectionId));
+          return sections.find((s) => s.elementId === sectionId || (s.id === 'main' && !sectionId));
         })
         .filter(Boolean) as typeof sections;
 
@@ -157,7 +157,7 @@ function CustomScrollBar() {
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
     // 각 섹션 요소 관찰
-    sections.forEach(section => {
+    sections.forEach((section) => {
       if (section.id === 'main') {
         const mainElement = document.getElementById('main') || document.body.firstElementChild;
         if (mainElement) {
@@ -181,7 +181,7 @@ function CustomScrollBar() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const section = sections.find(s => s.id === sectionId);
+    const section = sections.find((s) => s.id === sectionId);
     if (section) {
       if (section.elementId) {
         const element = document.getElementById(section.elementId);
@@ -207,12 +207,9 @@ function CustomScrollBar() {
   return (
     <ScrollBarContainer ref={containerRef}>
       <ScrollBar>
-        <ScrollProgress
-          $progress={scrollProgress}
-          style={{ height: `${scrollProgress}%` }}
-        />
+        <ScrollProgress $progress={scrollProgress} style={{ height: `${scrollProgress}%` }} />
       </ScrollBar>
-      
+
       <div className="flex flex-col gap-3 items-center relative">
         {sections.map((section) => (
           <div key={section.id} className="relative">
@@ -221,9 +218,7 @@ function CustomScrollBar() {
               onClick={() => scrollToSection(section.id)}
               aria-label={`Go to ${section.label}`}
             />
-            <SectionLabel $active={activeSection === section.id}>
-              {section.label}
-            </SectionLabel>
+            <SectionLabel $active={activeSection === section.id}>{section.label}</SectionLabel>
           </div>
         ))}
       </div>

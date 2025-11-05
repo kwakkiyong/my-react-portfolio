@@ -6,8 +6,7 @@ export const MainBg = tw(motion.div)`
   bg-cover
   bg-center
   bg-main
-  bg-gray-200
-  dark:bg-gray-900
+  bg-transparent
   top-0
   bottom-0
   left-0

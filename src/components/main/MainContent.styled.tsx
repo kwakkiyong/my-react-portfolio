@@ -13,14 +13,14 @@ export const MainComponent = tw.main<IsMobile>`
   items-center
   flex-col
   justify-between
-  bg-gray-100
-  dark:bg-gray-950
+  bg-transparent
   px-10
   pt-24
   sticky
   top-0
   overflow-hidden
   transition-colors
+  z-10
 
   ${(props) => (props.ismobile === 'true' ? 'max-sm:h-[calc(var(--vh,1vh)*100)]' : 'max-sm:h-screen')}
   max-sm:pt-20

@@ -17,10 +17,10 @@ const Header = () => {
             {/* 메뉴 */}
             <nav className="hidden md:flex items-center space-x-6">
               <a
-                href="#about"
+                href="#AboutMe"
                 className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
-                About
+                AboutMe
               </a>
               <a
                 href="#Skills"
@@ -29,13 +29,13 @@ const Header = () => {
                 Skills
               </a>
               <a
-                href="#Projects"
+                href="#Career"
                 className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
-                Projects
+                Career
               </a>
               <a
-                href="#contact"
+                href="#Contact"
                 className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
                 Contact

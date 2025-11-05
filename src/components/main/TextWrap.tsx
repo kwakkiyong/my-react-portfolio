@@ -61,7 +61,7 @@ function TextWrap() {
         animate={{ ...OPACITY_1, y: 0 }}
         transition={{ ...ANI_TRANSITION, delay: 2.5 } as any}
       >
-        프론트엔드 포트폴리오
+        포트폴리오
       </SubTitle>
     </TxtBox>
   );

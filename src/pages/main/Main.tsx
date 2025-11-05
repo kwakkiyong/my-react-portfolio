@@ -2,15 +2,15 @@ import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import { isMobile } from '../utils/isMobile';
-import SocialLinkList from '../components/main/SocialList';
-import ScrollArrow from '../components/main/ScrollArrow';
-import InfoWrap from '../components/main/InfoWrap';
-import { ANI_TRANSITION, OPACITY_0, OPACITY_1 } from '../utils/constant/constant';
-import TextWrap from '../components/main/TextWrap';
-import { MainComponent } from '../components/main/MainContent.styled';
-import MainBackground from '../components/atoms/background/MainBackground';
-import AnimatedBackground from '../components/atoms/background/AnimatedBackground';
+import { isMobile } from '@utils/isMobile.ts';
+import SocialLinkList from '@components/main/SocialList.tsx';
+import ScrollArrow from '@components/main/ScrollArrow.tsx';
+import InfoWrap from '@components/main/InfoWrap.tsx';
+import { ANI_TRANSITION, OPACITY_0, OPACITY_1 } from '@utils/constant/constant.ts';
+import TextWrap from '@components/main/TextWrap.tsx';
+import { MainComponent } from '@components/main/MainContent.styled.tsx';
+import MainBackground from '@components/atoms/background/MainBackground.tsx';
+
 
 function Main() {
   const { pathname } = useLocation(); // 현재 라우트 경로
@@ -48,9 +48,6 @@ function Main() {
           animate={{ ...OPACITY_1, scale: 1 }}
           transition={{ ...ANI_TRANSITION, delay: 3 }}
         />
-
-        {/* 애니메이션 배경 (별/비눗방울) */}
-        <AnimatedBackground />
 
         {/* GitHub, Blog 등 소셜 링크 */}
         <SocialLinkList delay={3} />
