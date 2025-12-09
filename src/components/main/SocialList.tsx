@@ -5,22 +5,25 @@ import DataToolTip from '../toolTip/ToolTip';
 
 type PropsT = {
   width?: string;
-}
+};
 
-export const SocialList = tw(motion.div) <PropsT>`
+export const SocialList = tw(motion.div)<PropsT>`
   absolute
-  top-24
-  left-10
-  right-10
+  top-20
+  sm:top-24
+  left-4
+  sm:left-6
+  md:left-10
+  right-4
+  sm:right-6
+  md:right-10
   flex
-  gap-5
+  gap-3
+  sm:gap-4
+  md:gap-5
   z-30
   justify-center
   w-auto
-  
-  max-sm:top-20
-  max-sm:left-5
-  max-sm:right-5
 `;
 
 export const SocialLink = tw.a`
@@ -63,7 +66,7 @@ export const ScTxt = tw.span`
   focus:not-sr-only
 `;
 
-function SocialLinkList({ delay, width }: { delay?: number, width?: string }) {
+function SocialLinkList({ delay, width }: { delay?: number; width?: string }) {
   return (
     <SocialList
       width={width}
@@ -79,7 +82,7 @@ function SocialLinkList({ delay, width }: { delay?: number, width?: string }) {
         </DataToolTip>
       ))}
     </SocialList>
-  )
+  );
 }
 
 export default SocialLinkList;

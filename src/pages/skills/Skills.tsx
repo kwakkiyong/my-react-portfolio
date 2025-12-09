@@ -1,27 +1,17 @@
-import { motion } from 'framer-motion';
-import tw from 'tailwind-styled-components';
-
-const IntroComponent = tw.main`
-  relative
-  flex
-  items-center
-  flex-col
-  justify-center
-  bg-transparent
-  px-10
-  pt-10
-  z-1
-  max-lg:h-auto
-  max-lg:py-20
-`;
+import Section from '@components/layout/Section';
+import SkillsCarousel from '@components/skills/SkillsCarousel';
+import { skillCategories } from '@data/skills';
 
 function Skills() {
   return (
-    <motion.div className="top-0" id="main">
-      <IntroComponent id="Skills">
-        <div className="h-screen w-full"></div>
-      </IntroComponent>
-    </motion.div>
+    <Section id="Skills" className="bg-transparent">
+      <div className="w-full max-w-5xl mx-auto">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 md:mb-16 text-center sm:text-left">
+          Skills
+        </h1>
+        <SkillsCarousel categories={skillCategories} />
+      </div>
+    </Section>
   );
 }
 

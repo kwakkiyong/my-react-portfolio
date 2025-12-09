@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components';
 import { motion } from 'framer-motion';
-import { ANI_TRANSITION, OPACITY_0, OPACITY_1 } from '../../utils/constant/constant';
+import { ANI_TRANSITION, OPACITY_0, OPACITY_1 } from '@utils/constant/constant.ts';
 
 export const TxtBox = tw.section`
   absolute
@@ -53,7 +53,7 @@ function TextWrap() {
         animate={{ ...OPACITY_1, y: 0 }}
         transition={{ ...ANI_TRANSITION, delay: 2 } as any}
       >
-        Kwak Ki Yong
+        Web-FrontEnd
       </MainTitle>
 
       <SubTitle
@@ -61,7 +61,7 @@ function TextWrap() {
         animate={{ ...OPACITY_1, y: 0 }}
         transition={{ ...ANI_TRANSITION, delay: 2.5 } as any}
       >
-        포트폴리오
+        곽기용의 포트폴리오
       </SubTitle>
     </TxtBox>
   );

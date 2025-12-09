@@ -28,24 +28,8 @@ function PersistentAnimatedBackground() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Career 섹션까지 배경 유지
-      const careerSection = document.getElementById('Career');
-      const contactSection = document.getElementById('Contact');
-      
-      if (careerSection && contactSection) {
-        const careerBottom = careerSection.getBoundingClientRect().bottom;
-        const contactTop = contactSection.getBoundingClientRect().top;
-        
-        // Career 섹션이 화면을 벗어나고 Contact 섹션이 나타나기 시작하면 배경 숨김
-        if (contactTop < window.innerHeight && careerBottom < 0) {
-          setShowBackground(false);
-        } else {
-          setShowBackground(true);
-        }
-      } else {
-        // 섹션이 아직 렌더링되지 않았으면 일단 표시
-        setShowBackground(true);
-      }
+      // 모든 섹션에서 배경 표시 유지
+      setShowBackground(true);
     };
 
     // 약간의 지연 후 실행 (DOM이 완전히 로드된 후)

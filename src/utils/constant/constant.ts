@@ -11,7 +11,7 @@ export const socialLink = [
     id: 1,
     datatooltip: 'GitHub 가기',
     tooltiptype: 'bottom',
-    href: 'https://github.com/kky941230',
+    href: 'https://github.com/kwakkiyong',
     arialabel: 'GitHub',
     target: '_blank',
   },

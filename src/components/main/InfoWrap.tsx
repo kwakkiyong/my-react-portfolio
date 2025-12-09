@@ -5,37 +5,33 @@ import { DelayT } from '../../types/type';
 
 export const InfoTxtWrap = tw(motion.div)`
   absolute
-  left-10
-  bottom-10
-
-  max-sm:left-5
-  max-sm:bottom-5
+  left-4
+  sm:left-6
+  md:left-10
+  bottom-4
+  sm:bottom-6
+  md:bottom-10
 `;
 
 export const InfoTxt = tw.span`
   block
-  text-base
+  text-sm
+  sm:text-base
   text-[#999]
   dark:text-gray-400
   transition-colors
-
-  max-sm:text-sm
-  max-sm:text-gray-600
-  dark:max-sm:text-gray-400
-  max-sm:drop-shadow-[0px_0px_1px_#000000]
-  dark:max-sm:drop-shadow-[0px_0px_1px_#ffffff]
+  text-gray-600
+  dark:text-gray-400
+  drop-shadow-[0px_0px_1px_#000000]
+  dark:drop-shadow-[0px_0px_1px_#ffffff]
 `;
 
 function InfoWrap({ delay }: DelayT) {
   return (
-    <InfoTxtWrap
-      initial={OPACITY_0}
-      animate={OPACITY_1}
-      transition={{ ...ANI_TRANSITION, delay: delay } as any}
-    >
+    <InfoTxtWrap initial={OPACITY_0} animate={OPACITY_1} transition={{ ...ANI_TRANSITION, delay: delay } as any}>
       <InfoTxt>update. {UPDATE_DATA}</InfoTxt>
     </InfoTxtWrap>
-  )
+  );
 }
 
 export default InfoWrap;
