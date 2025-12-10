@@ -9,6 +9,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
+    { href: '#AboutMe', label: 'About Me' },
     { href: '#Interview', label: 'Interview' },
     { href: '#Skills', label: 'Skills' },
     { href: '#Career', label: 'Career' },
@@ -29,9 +30,7 @@ const Header = () => {
       <div className="relative z-10 backdrop-blur-md container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           {/* 로고 */}
-          <div className="text-lg font-comic-neue sm:text-xl font-bold text-gray-800 dark:text-white">
-            KKY's Portfolio
-          </div>
+          <div className="text-lg sm:text-xl font-bold text-gray-800 dark:text-white">KKY's Portfolio</div>
 
           {/* 데스크톱 메뉴 및 다크모드 토글 */}
           <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
@@ -40,7 +39,7 @@ const Header = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-gray-700 font-comic-neue dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm lg:text-lg"
+                  className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm lg:text-lg"
                 >
                   {item.label}
                 </a>

@@ -47,8 +47,8 @@ export default function SkillsCarousel({ categories }: SkillsCarouselProps) {
           }}
           transition={{
             type: 'spring',
-            stiffness: 300,
-            damping: 30,
+            stiffness: 200,
+            damping: 40,
           }}
         >
           {visibleCategories.map((category) => (
@@ -72,7 +72,7 @@ export default function SkillsCarousel({ categories }: SkillsCarouselProps) {
         <>
           <button
             onClick={handlePrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-12 bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors z-20 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="border absolute -left-10 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-12 bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors z-20 disabled:opacity-50 disabled:cursor-not-allowed"
             aria-label="이전 카드"
             disabled={currentIndex === 0}
           >
@@ -80,7 +80,7 @@ export default function SkillsCarousel({ categories }: SkillsCarouselProps) {
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-12 bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors z-20 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="border absolute -right-10 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-12 bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors z-20 disabled:opacity-50 disabled:cursor-not-allowed"
             aria-label="다음 카드"
             disabled={currentIndex >= visibleCategories.length - 2}
           >

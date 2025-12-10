@@ -70,6 +70,7 @@ const SectionLabel = tw.span<{ $active: boolean }>`
 
 const sections = [
   { id: 'main', label: 'Main', elementId: null },
+  { id: 'AboutMe', label: 'About Me', elementId: 'AboutMe' },
   { id: 'Interview', label: 'Interview', elementId: 'Interview' },
   { id: 'Skills', label: 'Skills', elementId: 'Skills' },
   { id: 'Career', label: 'Career', elementId: 'Career' },

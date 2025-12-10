@@ -29,7 +29,7 @@ const generateBubbles = (count: number, screenHeight: number) => {
     left: Math.random() * 100,
     startY: screenHeight + Math.random() * 100, // 화면 하단 밖에서 시작
     size: Math.random() * 60 + 20,
-    duration: Math.random() * 15 + 10,
+    duration: Math.random() * 10 + 6, // 더 빠르게 (6-16초)
     delay: Math.random() * 5,
     horizontalMovement: Math.random() * 40 - 20, // 좌우 움직임
   }));
@@ -38,7 +38,7 @@ const generateBubbles = (count: number, screenHeight: number) => {
 function BubblesBackground() {
   const { theme } = useTheme();
   const [screenHeight, setScreenHeight] = useState(window.innerHeight);
-  const bubbles = generateBubbles(15, screenHeight); // 비눗방울 개수
+  const bubbles = generateBubbles(25, screenHeight); // 비눗방울 개수 (15 -> 25로 증가)
   const isDark = theme === 'dark';
 
   useEffect(() => {
@@ -73,9 +73,7 @@ function BubblesBackground() {
           animate={{
             y: -screenHeight - bubble.size - 100,
             x: bubble.horizontalMovement,
-            opacity: isDark 
-              ? [0, 0.4, 0.6, 0.4, 0] 
-              : [0, 0.6, 0.8, 0.6, 0],
+            opacity: isDark ? [0, 0.4, 0.6, 0.4, 0] : [0, 0.6, 0.8, 0.6, 0],
             scale: [0.7, 0.9, 1, 1.1, 1.2],
           }}
           transition={{

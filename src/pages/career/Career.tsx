@@ -13,8 +13,14 @@ function Career() {
   return (
     <Section id="Career" className="bg-transparent">
       <div className="w-full max-w-7xl mx-auto">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 md:mb-16 text-center sm:text-left">
-          Career
+        <h1 className="relative inline-block text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-8 sm:mb-12 md:mb-16 text-center sm:text-left">
+          <span className="relative z-10 text-gray-200 dark:text-white">Career</span>
+          <span
+            className="absolute top-0 left-0 text-blue-400 dark:text-blue-400"
+            style={{ transform: 'translate(4px, 4px)', zIndex: 0 }}
+          >
+            Career
+          </span>
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           <Card className="h-full flex flex-col">
@@ -26,7 +32,7 @@ function Career() {
             <CardContent className="flex-1">
               <ul className="text-sm sm:text-base md:text-base leading-relaxed space-y-2">
                 <li className="pl-2.5 relative before:absolute before:w-1 before:h-1 before:bg-gray-500 dark:before:bg-gray-400 before:block before:rounded-full before:left-0 before:top-[0.625rem]">
-                  ETL 솔루션 프론트&백엔드 개발 (ExtJS, JavaScript, Java)
+                  ETL 솔루션 프론트&백엔드 개발 및 설계 (ExtJS, JavaScript, Java)
                 </li>
                 <li className="pl-2.5 relative before:absolute before:w-1 before:h-1 before:bg-gray-500 dark:before:bg-gray-400 before:block before:rounded-full before:left-0 before:top-[0.625rem]">
                   highChart, Prometheus 를 사용한 대시보드 신규 구축
@@ -38,7 +44,7 @@ function Career() {
                   클라이언트와의 직접적인 소통 및 응대를 통해 UI/UX 구체화
                 </li>
                 <li className="pl-2.5 relative before:absolute before:w-1 before:h-1 before:bg-gray-500 dark:before:bg-gray-400 before:block before:rounded-full before:left-0 before:top-[0.625rem]">
-                  다양한 프로젝트에서 고객사와의 원활한 커뮤니케이션과 협업을 통해 안정적인 서비스 제공
+                  다양한 프로젝트에서 고객사와의 원활한 커뮤니케이션과 직접적인 협업을 주도하여 안정적인 서비스 제공
                 </li>
               </ul>
               <div className="flex mt-5 gap-2">

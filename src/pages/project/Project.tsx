@@ -8,8 +8,14 @@ function Project() {
   return (
     <Section id="Project" className="bg-transparent">
       <div className="w-full max-w-7xl mx-auto">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 md:mb-16 text-center sm:text-left">
-          Project
+        <h1 className="relative inline-block text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-8 sm:mb-12 md:mb-16 text-center sm:text-left">
+          <span className="relative z-10 text-gray-200 dark:text-white">Project</span>
+          <span
+            className="absolute top-0 left-0 text-blue-400 dark:text-blue-400"
+            style={{ transform: 'translate(4px, 4px)', zIndex: 0 }}
+          >
+            Project
+          </span>
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
           <Card className="h-full flex flex-col overflow-hidden p-0">

@@ -30,7 +30,7 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 220 20% 14.7%; /* rgb(30, 35, 45) */
     --foreground: 210 40% 98%;
     --card: 222.2 84% 7.9%;
     --card-foreground: 210 40% 98%;
@@ -53,41 +53,26 @@
 
   * {
     font-family:
-      'Pretendard',
+      'Montserrat',
       -apple-system,
       BlinkMacSystemFont,
       'Segoe UI',
       Roboto,
       'Helvetica Neue',
       Arial,
-      'Noto Sans KR',
       sans-serif;
   }
 
   body {
     @apply bg-background text-foreground;
     font-family:
-      'Pretendard',
+      'Montserrat',
       -apple-system,
       BlinkMacSystemFont,
       'Segoe UI',
       Roboto,
       'Helvetica Neue',
       Arial,
-      'Noto Sans KR',
-      sans-serif;
-  }
-
-  .font-pretendard {
-    font-family:
-      'Pretendard',
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      'Helvetica Neue',
-      Arial,
-      'Noto Sans KR',
       sans-serif;
   }
 }

@@ -5,7 +5,16 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Comic Neue', 'Gamja Flower', 'Fredoka', 'cursive'],
+        sans: [
+          'Montserrat',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'sans-serif',
+        ],
         'comic-neue': ['Comic Neue', 'Gamja Flower', 'Fredoka', 'cursive'],
       },
       colors: {
