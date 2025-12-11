@@ -4,7 +4,7 @@ export const OPACITY_1 = { opacity: 1 };
 export const Y_0 = { y: 0 };
 export const Y_M20 = { y: -20 };
 export const ANI_TRANSITION = { ease: 'easeOut', duration: 0.8 };
-export const UPDATE_DATA = '25. 11. 04';
+export const UPDATE_DATA = '25. 12. 11';
 
 export const socialLink = [
   {
