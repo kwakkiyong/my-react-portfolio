@@ -5,8 +5,8 @@ import { Card, CardContent } from '@components/ui/card.tsx';
 function AboutMe() {
   return (
     <Section id="AboutMe" className="bg-transparent">
-      <div className=" w-full max-w-7xl mx-auto p-10 sm:px-6 md:px-10 ">
-        <h1 className="relative inline-block text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-8 sm:mb-12 md:mb-16 text-center sm:text-left">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
+        <h1 className="relative inline-block text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-6 sm:mb-8 md:mb-12 lg:mb-16 text-center sm:text-left">
           <span className="relative z-10 text-gray-300 dark:text-white">About Me</span>
           <span
             className="absolute top-0 left-0 text-blue-400 dark:text-blue-400"
@@ -15,7 +15,7 @@ function AboutMe() {
             About Me
           </span>
         </h1>
-        <div className="p-12 rounded-3xl shadow-sm bg-white border">
+        <div className="p-4 sm:p-6 md:p-8 lg:p-12 rounded-2xl sm:rounded-3xl shadow-sm bg-white border">
           {/* 프론트엔드 개발자로서의 포부 */}
           <Card className="mb-5 bg-white border-none shadow-none">
             <CardContent className="p-5 sm:p-8">

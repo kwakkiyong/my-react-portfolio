@@ -16,7 +16,7 @@ export default function SocialLink() {
         </div>
       </a>
       <a
-        href="https://notion/ko"
+        href="https://heavenly-earl-cb3.notion.site/2d212196d3be80cbbac6cf996bba3f71?pvs=73"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-white rounded-lg my-4 px-3 py-1.5 border-2 border-white shadow-lg -rotate-6 hover:scale-105 transition-transform cursor-pointer"

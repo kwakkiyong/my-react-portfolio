@@ -75,7 +75,6 @@ const sections = [
   { id: 'Skills', label: 'Skills', elementId: 'Skills' },
   { id: 'Career', label: 'Career', elementId: 'Career' },
   { id: 'Project', label: 'Project', elementId: 'Project' },
-  { id: 'Contact', label: 'Contact', elementId: 'Contact' },
 ];
 
 function CustomScrollBar() {

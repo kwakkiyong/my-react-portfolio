@@ -14,7 +14,6 @@ const Header = () => {
     { href: '#Skills', label: 'Skills' },
     { href: '#Career', label: 'Career' },
     { href: '#Project', label: 'Project' },
-    { href: '#Contact', label: 'Contact' },
   ];
 
   const handleMenuClick = () => {
