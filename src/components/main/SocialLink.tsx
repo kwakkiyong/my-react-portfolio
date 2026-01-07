@@ -1,5 +1,5 @@
-import githubIcon from '@/assets/images/Profile_GitHub.svg';
-import notionIcon from '@/assets/images/Profile_Notion.svg';
+import githubIcon from '../../../public/assets/images/Profile_GitHub.svg';
+import notionIcon from '../../../public/assets/images/Profile_Notion.svg';
 
 export default function SocialLink() {
   return (

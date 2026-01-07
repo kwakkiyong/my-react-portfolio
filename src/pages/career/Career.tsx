@@ -1,13 +1,13 @@
 import Section from '@components/layout/Section';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@components/ui/card.tsx';
-import javaScriptIcon from '@assets/icons/JavaScript.svg';
-import cssIcon from '@assets/icons/CSS.svg';
-import senchaIcon from '@assets/icons/Sencha.svg';
-import javaIcon from '@assets/icons/Java.svg';
-import mysqlIcon from '@assets/icons/MySQL.svg';
-import reactIcon from '@assets/icons/React.svg';
-import typeScriptIcon from '@assets/icons/TypeScript.svg';
-import tailwindCssIcon from '@assets/icons/TailwindCSS.svg';
+import javaScriptIcon from '../../../public/assets/icons/JavaScript.svg';
+import cssIcon from '../../../public/assets/icons/CSS.svg';
+import senchaIcon from '../../../public/assets/icons/Sencha.svg';
+import javaIcon from '../../../public/assets/icons/Java.svg';
+import mysqlIcon from '../../../public/assets/icons/MySQL.svg';
+import reactIcon from '../../../public/assets/icons/React.svg';
+import typeScriptIcon from '../../../public/assets/icons/TypeScript.svg';
+import tailwindCssIcon from '../../../public/assets/icons/TailwindCSS.svg';
 
 function Career() {
   return (

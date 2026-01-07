@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { ANI_TRANSITION, OPACITY_0, OPACITY_1 } from '@utils/constant/constant.ts';
-import reactIcon from '@assets/icons/React.svg';
-import typeScriptIcon from '@assets/icons/TypeScript.svg';
-import tailwindCssIcon from '@assets/icons/TailwindCSS.svg';
-import javaScriptIcon from '@assets/icons/JavaScript.svg';
+import reactIcon from '../../../public/assets/icons/React.svg';
+import typeScriptIcon from '../../../public/assets/icons/TypeScript.svg';
+import tailwindCssIcon from '../../../public/assets/icons/TailwindCSS.svg';
+import javaScriptIcon from '../../../public/assets/icons/JavaScript.svg';
 
 const mainTechStack = [
   { name: 'React', icon: reactIcon },

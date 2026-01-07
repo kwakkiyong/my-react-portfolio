@@ -26,25 +26,25 @@ React와 TypeScript로 만든 프로젝트, 퍼블리싱과 웹표준 등을 고
 - 소셜 링크 (GitHub, Notion)
 - 스크롤 화살표
 
-![main_dark.png](src/assets/capture/main_dark.png)
+![main_dark.png](public/assets/capture/main_dark.png)
 
-![main_white.png](src/assets/capture/main.png)
+![main_white.png](public/assets/capture/main.png)
 - 
 ### 2. 📌 About Me 페이지
 
 저를 나타내는 페이지이며 저의 자기소개가 담겨져 있습니다.
 
-![aboutMe.png](src/assets/capture/aboutMe.png)
+![aboutMe.png](public/assets/capture/aboutMe.png)
 
-![aboutMe_dark.png](src/assets/capture/aboutMe_dark.png)
+![aboutMe_dark.png](public/assets/capture/aboutMe_dark.png)
 
 ### 3. 💼 Interview 페이지
 
 프론트엔드 개발자로서의 생각과 경험을 담은 Q&A 페이지입니다.
 
-![interview_dark.png](src/assets/capture/interview_dark.png)
+![interview_dark.png](public/assets/capture/interview_dark.png)
 
-![interview.png](src/assets/capture/interview.png)
+![interview.png](public/assets/capture/interview.png)
 
 ### 4. 👩‍💻 Skills 페이지
 
@@ -52,9 +52,9 @@ React와 TypeScript로 만든 프로젝트, 퍼블리싱과 웹표준 등을 고
 
 - Carousel 형태의 네비게이션
 
-![skills_dark.png](src/assets/capture/skills_dark.png)
+![skills_dark.png](public/assets/capture/skills_dark.png)
 
-![skills.png](src/assets/capture/skills.png)
+![skills.png](public/assets/capture/skills.png)
 
 ### 5. 💼 Career 페이지
 
@@ -64,9 +64,9 @@ React와 TypeScript로 만든 프로젝트, 퍼블리싱과 웹표준 등을 고
 - 주요 업무 내용
 - 사용 기술 스택
 
-![skills_dark.png](src/assets/capture/career_dark.png)
+![skills_dark.png](public/assets/capture/career_dark.png)
 
-![skills.png](src/assets/capture/career.png)
+![skills.png](public/assets/capture/career.png)
 
 ### 6. 🚀 Project 페이지
 
@@ -77,9 +77,9 @@ React와 TypeScript로 만든 프로젝트, 퍼블리싱과 웹표준 등을 고
 - Hover 애니메이션 효과
 - 기술 스택 아이콘
 
-![skills_dark.png](src/assets/capture/project_dark.png)
+![skills_dark.png](public/assets/capture/project_dark.png)
 
-![skills.png](src/assets/capture/project.png)
+![skills.png](public/assets/capture/project.png)
 
 ## 📱 반응형 디자인
 
