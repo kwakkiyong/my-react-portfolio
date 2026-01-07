@@ -67,12 +67,12 @@ export default function SkillsCarousel({ categories }: SkillsCarouselProps) {
         </motion.div>
       </div>
 
-      {/* 화살표 버튼 */}
-      {visibleCategories.length > 2 && (
+      {/* 화살표 버튼 - 데스크톱 */}
+      {!isMobile && visibleCategories.length > 2 && (
         <>
           <button
             onClick={handlePrev}
-            className="border absolute -left-10 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-12 bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors z-20 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="border absolute -left-14 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors z-20 disabled:opacity-50 disabled:cursor-not-allowed"
             aria-label="이전 카드"
             disabled={currentIndex === 0}
           >
@@ -80,7 +80,7 @@ export default function SkillsCarousel({ categories }: SkillsCarouselProps) {
           </button>
           <button
             onClick={handleNext}
-            className="border absolute -right-10 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-12 bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors z-20 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="border absolute -right-14 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors z-20 disabled:opacity-50 disabled:cursor-not-allowed"
             aria-label="다음 카드"
             disabled={currentIndex >= visibleCategories.length - 2}
           >
@@ -90,24 +90,55 @@ export default function SkillsCarousel({ categories }: SkillsCarouselProps) {
       )}
 
       {/* 인디케이터 */}
-      {visibleCategories.length > 2 && (
-        <div className="flex justify-center gap-2 mt-6">
-          {Array.from({ length: Math.ceil(visibleCategories.length / 2) }).map((_, index) => {
-            const pageIndex = index * 2;
-            const isActive = currentIndex === pageIndex || (currentIndex === pageIndex - 1 && pageIndex > 0);
-            return (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(pageIndex)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  isActive
-                    ? 'bg-blue-500 dark:bg-blue-400 w-6'
-                    : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
-                }`}
-                aria-label={`페이지 ${index + 1}`}
-              />
-            );
-          })}
+      {visibleCategories.length > (isMobile ? 1 : 2) && (
+        <div className="flex items-center justify-center gap-2 mt-6">
+          {/* 모바일: 왼쪽 화살표 */}
+          {isMobile && (
+            <button
+              onClick={handlePrev}
+              className="border bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              aria-label="이전 카드"
+              disabled={currentIndex === 0}
+            >
+              <ChevronLeft className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+            </button>
+          )}
+
+          {/* 인디케이터 점들 */}
+          <div className="flex justify-center gap-2">
+            {Array.from({ length: isMobile ? visibleCategories.length : Math.ceil(visibleCategories.length / 2) }).map(
+              (_, index) => {
+                const pageIndex = isMobile ? index : index * 2;
+                const isActive = isMobile
+                  ? currentIndex === pageIndex
+                  : currentIndex === pageIndex || (currentIndex === pageIndex - 1 && pageIndex > 0);
+                return (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentIndex(pageIndex)}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      isActive
+                        ? 'bg-blue-500 dark:bg-blue-400 w-6'
+                        : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
+                    }`}
+                    aria-label={`페이지 ${index + 1}`}
+                  />
+                );
+              },
+            )}
+          </div>
+
+          {/* 모바일: 오른쪽 화살표 */}
+          {isMobile && (
+            <button
+              onClick={handleNext}
+              className="border bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              aria-label="다음 카드"
+              disabled={currentIndex >= visibleCategories.length - 1}
+            >
+              <ChevronRight className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+            </button>
+          )}
         </div>
       )}
     </div>

@@ -64,6 +64,10 @@ React와 TypeScript로 만든 프로젝트, 퍼블리싱과 웹표준 등을 고
 - 주요 업무 내용
 - 사용 기술 스택
 
+![skills_dark.png](src/assets/capture/career_dark.png)
+
+![skills.png](src/assets/capture/career.png)
+
 ### 6. 🚀 Project 페이지
 
 제작한 프로젝트들을 보여주는 페이지입니다.
@@ -73,13 +77,9 @@ React와 TypeScript로 만든 프로젝트, 퍼블리싱과 웹표준 등을 고
 - Hover 애니메이션 효과
 - 기술 스택 아이콘
 
-## 🎨 디자인 특징
+![skills_dark.png](src/assets/capture/project_dark.png)
 
-- **반응형 디자인**: 모바일, 태블릿, 데스크톱 모든 기기에서 최적화
-- **다크모드 지원**: 사용자 선호에 따른 테마 전환
-- **입체적 타이포그래피**: 제목 텍스트에 3D 효과 적용
-- **부드러운 애니메이션**: Framer Motion을 활용한 자연스러운 전환 효과
-- **모던한 UI**: Shadcn UI와 Tailwind CSS를 활용한 깔끔한 디자인
+![skills.png](src/assets/capture/project.png)
 
 ## 📱 반응형 디자인
 
@@ -88,3 +88,4 @@ React와 TypeScript로 만든 프로젝트, 퍼블리싱과 웹표준 등을 고
 - **모바일**: 기본 (640px 미만)
 - **태블릿**: `sm:` (640px 이상)
 - **데스크톱**: `md:` (768px 이상), `lg:` (1024px 이상)
+
