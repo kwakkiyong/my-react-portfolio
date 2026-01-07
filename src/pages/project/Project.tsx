@@ -1,8 +1,8 @@
 import Section from '@components/layout/Section';
 import { Card } from '@components/ui/card.tsx';
-import reactIcon from '../../../public/assets/icons/React.svg';
-import typeScriptIcon from '../../../public/assets/icons/TypeScript.svg';
-import tailwindCssIcon from '../../../public/assets/icons/TailwindCSS.svg';
+const reactIcon = '/assets/icons/React.svg';
+const typeScriptIcon = '/assets/icons/TypeScript.svg';
+const tailwindCssIcon = '/assets/icons/TailwindCSS.svg';
 
 interface ProjectItem {
   id: string;
@@ -19,7 +19,7 @@ const projects: ProjectItem[] = [
     id: 'lunediary',
     title: 'LuneDiary - 감정일기',
     description: '하루의 감정을 일기로 기록하면 AI가 감정을 분석, 요약, 감정에 맞는 음악을 추천해주는 다이어리입니다.',
-    image: 'public/assets/images/LuneDiary.png',
+    image: '/assets/images/LuneDiary.png',
     techIcons: [reactIcon, typeScriptIcon, tailwindCssIcon],
     deployUrl: 'https://lune-diary.netlify.app/', // 배포 URL
     notionUrl: 'https://heavenly-earl-cb3.notion.site/Project-Lune-Diary-2d212196d3be8003ae9fcffd981e776d', // 노션 URL
@@ -28,7 +28,7 @@ const projects: ProjectItem[] = [
     id: 'hana-agent-chat',
     title: 'Hana Agent Chat',
     description: 'OpenAI API를 활용하여 다양한 AI 에이전트와 실시간 대화를 제공하는 간소화된 채팅 애플리케이션입니다.',
-    image: 'public/assets/images/HanaAgentChat.png',
+    image: '/assets/images/HanaAgentChat.png',
     techIcons: [reactIcon, typeScriptIcon, tailwindCssIcon],
     notionUrl: 'https://heavenly-earl-cb3.notion.site/Project-HaNa-Agent-Chat-2b912196d3be80c58fc8dfc6ed60953a',
   },
@@ -36,7 +36,7 @@ const projects: ProjectItem[] = [
     id: 'portfolio',
     title: '포트폴리오 사이트',
     description: '저를 소개하는 포트폴리오 사이트 입니다.',
-    image: 'public/assets/images/Portfolio.png',
+    image: '/assets/images/Portfolio.png',
     techIcons: [reactIcon, typeScriptIcon, tailwindCssIcon],
     deployUrl: 'https://kky-portfolio.netlify.app/',
     notionUrl: 'https://heavenly-earl-cb3.notion.site/Project-KKY-s-2a212196d3be803d807df1b6707d678d',
@@ -45,7 +45,7 @@ const projects: ProjectItem[] = [
     id: 'visual-etl-builder',
     title: 'Visual ETL Builder',
     description: 'Airflow, AWS Glue 와 유사한 비주얼 파이프라인 빌더를 구현한 프로젝트입니다.',
-    image: 'public/assets/images/VisualEtlBuilder.png',
+    image: '/assets/images/VisualEtlBuilder.png',
     techIcons: [reactIcon, typeScriptIcon, tailwindCssIcon],
     notionUrl: 'https://heavenly-earl-cb3.notion.site/Project-Visual-ETL-Builder-2d212196d3be80abb2f2f411acb1512e',
   },
@@ -53,7 +53,7 @@ const projects: ProjectItem[] = [
     id: 'blog',
     title: '개인 블로그 사이트',
     description: 'React로 구현한 개인 블로그입니다.',
-    image: 'public/assets/images/Blog.png',
+    image: '/assets/images/Blog.png',
     techIcons: [reactIcon, typeScriptIcon, tailwindCssIcon],
     notionUrl: 'https://heavenly-earl-cb3.notion.site/Project-KKY-s-Blog-2d212196d3be80ff9adbc98ca50df159',
   },
