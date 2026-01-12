@@ -39,7 +39,7 @@ const projects: ProjectItem[] = [
     image: '/assets/images/Portfolio.png',
     techIcons: [reactIcon, typeScriptIcon, tailwindCssIcon],
     deployUrl: 'https://kky-portfolio.netlify.app/',
-    notionUrl: 'https://heavenly-earl-cb3.notion.site/Project-KKY-s-2a212196d3be803d807df1b6707d678d',
+    notionUrl: 'https://heavenly-earl-cb3.notion.site/Project-React-2e612196d3be8090a890cd0a7f685193',
   },
   {
     id: 'visual-etl-builder',
